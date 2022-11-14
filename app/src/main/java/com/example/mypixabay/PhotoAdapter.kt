@@ -10,7 +10,7 @@ import com.example.mypixabay.model.ImageModel
 
 class PhotoAdapter(private val list: ArrayList<ImageModel>) :
     RecyclerView.Adapter<PhotoAdapter.PhotoViewHolder>() {
-    class PhotoViewHolder(private val binding: ItemImageBinding) : RecyclerView.ViewHolder(binding.root) {
+    class PhotoViewHolder(private val binding:ItemImageBinding) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(imageModel: ImageModel) {
             binding.photoImg.load(imageModel.largeImageURL)
         }

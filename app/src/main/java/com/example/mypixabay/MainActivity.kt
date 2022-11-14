@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ActivityMainBinding.requestByImage(page: Int) {
-        App.api.getImages(keyWord = photoEd.toString(), page = page)
+        App.api.getImages(keyWord = binding.photoEd.text.toString(), page = page)
             .enqueue(object : Callback<PixaModel> {
                 override fun onResponse(
                     call: Call<PixaModel>,
